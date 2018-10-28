@@ -65,8 +65,25 @@ npm install
 
 > *Now your disappointment is immeasurable, and your holidays are ruined.*  
 
-## Hey, I just want to play with your Api, how do I do that ?
-That's easy. You just need to go to our web app : **[https://tweb-lfdm-project.herokuapp.com/](https://tweb-lfdm-project.herokuapp.com/)**
+### Hey, I just want to play with your Api, how do I do that ?
+That's easy, but first, you need to run a local version of the server to populate the database. To do so, run the following lines :
+```bash
+npm start
+```
+Then go to your browser and search the following link to fill the database.
+```HTML
+http://localhost:3000/request/afrique
+http://localhost:3000/request/bresil
+http://localhost:3000/request/chine
+http://localhost:3000/request/inde
+http://localhost:3000/request/japon
+http://localhost:3000/request/russie
+http://localhost:3000/request/suisse
+http://localhost:3000/request/suede
+http://localhost:3000/request/usa
+```
+Now you can freely play with the web app.
+You just need to go to our web app : **[https://tweb-lfdm-project.herokuapp.com/](https://tweb-lfdm-project.herokuapp.com/)**
 
 The following country are actually usable : [*afrique*, *bresil*, *chine*, *inde*, *japon*, *russie*, *suisse*, *suede*, *usa*].
 
