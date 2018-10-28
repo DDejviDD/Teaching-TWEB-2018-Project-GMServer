@@ -28,6 +28,7 @@ const RUSSIA = mongoose.model('RUSSIA', LanguagesSchema);
 const SWEDEN = mongoose.model('SWEDEN', LanguagesSchema);
 const SWITZERLAND = mongoose.model('SWITZERLAND', LanguagesSchema);
 const USA = mongoose.model('USA', LanguagesSchema);
+const HEIG = mongoose.model('HEIG', LanguagesSchema);
 module.exports = {
   AFRICA,
   BRAZIL,
@@ -38,4 +39,5 @@ module.exports = {
   SWEDEN,
   SWITZERLAND,
   USA,
+  HEIG,
 };

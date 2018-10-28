@@ -30,6 +30,9 @@ function findRequestedCountry(country) {
     case 'usa':
       promise = Languages.USA.findOne();
       break;
+    case 'heig':
+      promise = Languages.HEIG.findOne();
+      break;
     default:
       throw new Error('This courntry isn\'t supported yet');
   }
@@ -67,6 +70,9 @@ function deleteSelectedCountry(country) {
     case 'usa':
       promise = Languages.USA.deleteMany();
       break;
+    case 'heig':
+      promise = Languages.HEIG.deleteMany();
+      break;
     default:
       throw new Error('This courntry isn\'t supported yet, it can\'t be deleted');
   }
@@ -103,6 +109,9 @@ function addFreshDatas(country, datas) {
       break;
     case 'usa':
       promise = Languages.USA.create(datas);
+      break;
+    case 'heig':
+      promise = Languages.HEIG.create(datas);
       break;
     default:
       throw new Error('This courntry isn\'t supported yet, can\'t add datas here !');

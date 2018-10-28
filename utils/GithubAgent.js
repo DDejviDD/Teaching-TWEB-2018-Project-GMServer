@@ -85,6 +85,9 @@ class GithubAgent {
       case 'usa':
         countryUsers = samples.USA;
         break;
+      case 'heig':
+        countryUsers = samples.HEIG;
+        break;
       default:
         throw new Error('this country don\'t exists or isn\'t supported');
     }

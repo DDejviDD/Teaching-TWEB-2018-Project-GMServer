@@ -52,6 +52,7 @@ npm install
  - Create a new app for your project.
  ```bash
  heroku create (name)
+ heroku config:set OAUTH_TOKEN=(your github access token)
  ```
  Don't forget the name of your app. The name is optionnal.
  - Add the remote repository to your git and push your app.
@@ -66,7 +67,11 @@ npm install
 > *Now your disappointment is immeasurable, and your holidays are ruined.*  
 
 ### Hey, I just want to play with your Api, how do I do that ?
-That's easy, but first, you need to run a local version of the server to populate the database. To do so, run the following lines :
+That's easy, but first, you need to run a local version of the server to populate the database. 
+We do this because it's a bad practice to do heavy processing during a request. So we aim to use the database to store the data already processed. 
+**[One-Off Dynos](https://devcenter.heroku.com/articles/one-off-dynos)**
+
+To do it, run the following lines :
 ```bash
 npm start
 ```
