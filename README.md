@@ -52,7 +52,6 @@ npm install
  - Create a new app for your project.
  ```bash
  heroku create (name)
- heroku config:set OAUTH_TOKEN=(your github access token)
  ```
  Don't forget the name of your app. The name is optionnal.
  - Add the remote repository to your git and push your app.
@@ -61,6 +60,7 @@ npm install
  git add .
  git commit -m "Deploy on heroku"
  git push heroku master
+ heroku config:set OAUTH_TOKEN=(your github access token)
  ```
 5. Open your favourite browser and play with the Api on **[https://name.herokuapp.com/](https://name.herokuapp.com/)** Replace the name by the name of your app.
 
