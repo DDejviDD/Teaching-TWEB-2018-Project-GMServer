@@ -1,4 +1,4 @@
-const AFRICA = ['olivernn', 'woocommerce', 'woothemes', 'guybedford', 'tiaanduplessis', 'troybetz', 'qawemlilo', 'ncthbrt', 'charlgottschalk', 'platform45', 'alexisvincent', 'jorangreef', 'ronomon', 'julienvincent', 'incrementalcode', 'johnnynotsolucky', 'sensepost', 'praekelt', 'circlingthesun', 'mcoetzee'];
+const AFRICA = ['olivernn', 'woocommerce', 'woothemes', 'guybedford', 'tiaanduplessis', 'troybetz', 'qawemlilo', 'ncthbrt', 'charlgottschalk', 'platform45'];
 const BRAZIL = ['haskellcamargo', 'robotlolita', 'tarruda', 'mbenford', 'pagarme', 'globocom', 'suissa', 'lcdsantos', 'filipedeschamps'];
 const CHINA = ['alibaba', 'sentsin', 'aui', 'jacksontian', 'alloyteam', 'iamkun', 'chaozh', 'fengyuanchen', 'nswbmw', 'alsotang', 'luin', 'dcloudio', 'kesenhoo', 'wenzhixin', 'rubylouvre'];
 const INDIA = ['frappe', 'sachinchoolur', 'siddharthkp', 'threepointone', 'chinchang', 'webkul', 'rishabhp', 'apoorvsaxena', 'shekhargulati', 'ritz078', 'princejwesley', 'jpuri', 's-yadav', 'shyamseshadri', 'hemanth', 'kunalkapadia', 'wingify', 'codef0rmer', 'sureskumar', 'matterwiki'];
