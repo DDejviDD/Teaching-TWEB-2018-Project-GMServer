@@ -113,9 +113,8 @@ function addFreshDatas(country, datas) {
 
 function isDataExpired(dbDatas) {
   const date = new Date();
-  const minuteToExpiration = 60;
-  const expirationDate = new Date(date.setDate(date.getMinutes - minuteToExpiration));
-  return new Promise(resolve => resolve(typeof (dbDatas) === 'undefined' || dbDatas === null || dbDatas.timestamp < expirationDate));
+  const millitoExpiration = 60 * 60 * 1000;
+  return new Promise(resolve => resolve(typeof (dbDatas) === 'undefined' || dbDatas === null || date.valueOf() - dbDatas.timestamp.valueOf() > millitoExpiration));
 }
 
 function agregateLanguages(rawLanguages = []) {
