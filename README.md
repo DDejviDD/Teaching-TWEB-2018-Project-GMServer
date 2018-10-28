@@ -14,7 +14,7 @@ This is our backend Api that will be used to communicate with the github Api or 
 Like I said, we have a server.js that will communicate with the github api to fetch the infos about certains users from certain country. The choosen ones are in the utils/sample.js file.
 
 Once the datas are gatered, we go through them and count the number of line for every languages found. Once it's done the result is send as a JSON to the caller.
-We have a mongodb database to keep the fresh data up to one hour. Once they are expired, we clean the database and fetch the new ones. This makes the successive research a lot faster.
+We have a mongodb database to keep the fresh data up to three hour. Once they are expired, we clean the database and fetch the new ones. This makes the successive research a lot faster.
 
 ## Hey, I'm a bad developper and I want to steal your app, how do I do that ? 
 Hey, bad developper, if you're really desperate, I'll try to teach you how to work on our Api.
