@@ -92,23 +92,9 @@ class GithubAgent {
         throw new Error('this country don\'t exists or isn\'t supported');
     }
     // Create a promise that will do the job
-    const promise = new Promise((resolve) => {
-      const countryLanguages = [];
-      const getLanguages = (emptyArray, index) => {
-        if (index === countryUsers.length) {
-          resolve(functions.agregateLanguages(emptyArray));
-        }
-
-        this.userLanguages(countryUsers[index])
-          .then((datas) => {
-            emptyArray.push(...datas);
-            getLanguages(emptyArray, index + 1);
-          });
-      };
-      getLanguages(countryLanguages, 0);
-    });
-    // return this promise
-    return promise;
+    return Promise.all(countryUsers.map(user => this.userLanguages(user)
+      .then(datas => functions.agregateLanguages(datas))))
+      .then(datas => functions.agregateLanguages(datas));
   }
 }
 
