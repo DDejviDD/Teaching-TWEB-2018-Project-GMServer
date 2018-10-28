@@ -70,6 +70,9 @@ That's easy. You just need to go to our web app : **[https://tweb-lfdm-project.h
 
 The following country are actually usable : [*afrique*, *bresil*, *chine*, *inde*, *japon*, *russie*, *suisse*, *suede*, *usa*].
 
+## Remark
+We found out that if our heroku account contains more than one app, it becomes too slow or can't handle the server. 
+
 > We hope you've ruined your holidays well.
 > Sincerely yours,
 > Loïc and Dejvid 
