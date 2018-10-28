@@ -1,18 +1,20 @@
-# TWEB - Project 1 - "There's no hollidays"  
+# TWEB - Project 1 - "There's no holidays"  
 
 > Authors : Frueh Loic - Muaremi Dejvid  
 > Teacher : Monsieur Ntawuruhunga Nthimemuka Paul Aimé   
 > Minion : Miguel Santamaria   
 > Date : 28.10.2018  
-> **[Our Api is hosted here.](http:// )**  
+> **[Our Api is hosted here.](https://tweb-lfdm-project.herokuapp.com/)**  
 
 ## What is this ?
-This is our backend Api that will be used to communicate with the github Api or our MongoDB database. We love the Apiception.
+This is our backend Api that will be used to communicate with the github Api or our MongoDB database. We love this *Apiception*.
+
 
 ## What does it do ?
-Like I said, we have a server.js that will communicate with the github api to fetch the infos about certains users. The choosen ones are in the utils/sample.js file. The communication is done in the ustils/GithubAgent.js.
+Like I said, we have a server.js that will communicate with the github api to fetch the infos about certains users from certain country. The choosen ones are in the utils/sample.js file.
 
-Once the infos are fetched they are kept in a mongo database up to 1 hour. If we call the server with the following url : `/request/:country`, the first time we fetch the datas from git and add them to the database and the next times we fetch them from the database. It's a lot faster because we don't need to do the calculation.
+Once the datas are gatered, we go through them and count the number of line for every languages found. Once it's done the result is send as a JSON to the caller.
+We have a mongodb database to keep the fresh data up to one hour. Once they are expired, we clean the database and fetch the new ones. This makes the successive research a lot faster.
 
 ## Hey, I'm a bad developper and I want to steal your app, how do I do that ? 
 Hey, bad developper, if you're really desperate, I'll try to teach you how to work on our Api.
@@ -28,17 +30,46 @@ Hey, bad developper, if you're really desperate, I'll try to teach you how to wo
 Look at their official documentation to install them. Once you have installed everything you're ready to ~~ruin your holidays~~ work on the project.
 
 ### Now what do I do ?
-1. Clone the repo in a project directory. `git clone https://github.com/DDejviDD/Teaching-TWEB-2018-Project-GMServer.git`
-2. Update the .env file by adding your access token.
-2. Install all the dependencies `npm install`
-3. Ruin your holidays `Open the project in your IDE and work on it`
-4. Once you're done, you can deploy it on heroku.
- - Create the *Procfile* with the following line inside `web: node server.js`
- - Login to your heroku account `heroku login`
- - Create a new app for your project. `heroku create (name)` look carefully at the name of your app.
-5. Open your favourite browser and play with the Api on **[https://"name".herokuapp.com/request/"country"](https://"name".herokuapp.com/request/"country")** The name is the name of your app, and the country is one of the one that the app supports.
+1. Clone the repo in a project directory. 
+``` bash
+git clone https://github.com/DDejviDD/Teaching-TWEB-2018-Project-GMServer.git
+```
+2. Update the **.env** file by adding your **git access token**.
+3. Install all the dependencies.
+```bash
+npm install
+```
+4. Ruin your holidays.
+ *`Open the project in your IDE and work on it`*
+5. Once you're done, you can deploy it on heroku.
+ - Create the **Procfile** with the following line inside.
+ *`web: node server.js`*
+ This will tell heroku what to do with the app.
+ - Login to your heroku account.
+ ```bash
+ heroku login
+ ```
+ - Create a new app for your project.
+ ```bash
+ heroku create (name)
+ ```
+ Don't forget the name of your app. The name is optionnal.
+ - Add the remote repository to your git and push your app.
+ ``` bash
+ git remote add heroku  https://git.heroku.com/name.git
+ git add .
+ git commit -m "Deploy on heroku"
+ git push heroku master
+ ```
+5. Open your favourite browser and play with the Api on **[https://name.herokuapp.com/](https://name.herokuapp.com/)** Replace the name by the name of your app.
 
-Now your disappointment is immeasurable, and your hollidays are ruined.  
+> *Now your disappointment is immeasurable, and your holidays are ruined.*  
 
 ## Hey, I just want to play with your Api, how do I do that ?
-That's a easy one. You just need to go to our web app : **[https://.herokuapp.com/request/suisse](https://https://.herokuapp.com/request/suisse)**
+That's easy. You just need to go to our web app : **[https://tweb-lfdm-project.herokuapp.com/](https://tweb-lfdm-project.herokuapp.com/)**
+
+The following country are actually usable : [*afrique*, *bresil*, *chine*, *inde*, *japon*, *russie*, *suisse*, *suede*, *usa*].
+
+> We hope you've ruined your holidays well.
+> Sincerely yours,
+> Loïc and Dejvid 
