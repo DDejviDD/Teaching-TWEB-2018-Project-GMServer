@@ -122,7 +122,7 @@ function addFreshDatas(country, datas) {
 
 function isDataExpired(dbDatas) {
   const date = new Date();
-  const millitoExpiration = 0 * 60 * 1000;
+  const millitoExpiration = 1 * 60 * 1000;
   return new Promise(resolve => resolve(typeof (dbDatas) === 'undefined' || dbDatas === null || date.valueOf() - dbDatas.timestamp.valueOf() > millitoExpiration));
 }
 
