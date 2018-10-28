@@ -7,6 +7,9 @@ const routes = require('./routes/router');
 // Set up express app
 const app = express();
 
+// Enable CORS for the client app
+app.use(cors());
+
 // Enable database connection
 // Local
 // mongoose.connect('mongodb://localhost/GitMap', { useNewUrlParser: true });
@@ -32,8 +35,7 @@ mongoose.Promise = global.Promise;
 // MongoDb Promises depreciated
 mongoose.Promise = global.Promise;
 
-// Enable CORS for the client app
-app.use(cors());
+
 
 // Set up the routes
 app.use(routes);
